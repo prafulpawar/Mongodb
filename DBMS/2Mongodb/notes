@@ -1,4 +1,0 @@
-how to insert Data inside the Mongodb
-db.name_collection.insertOne
-db.name_collection.insertMany
-
