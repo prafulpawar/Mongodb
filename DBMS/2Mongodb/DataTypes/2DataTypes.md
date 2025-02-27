@@ -7,7 +7,7 @@ MongoDB supports various data types for storing documents in **BSON (Binary JSON
 
 ## 🔹 **MongoDB Data Types Table**
 
-| 🔢 **Data Type**                | 📝 **Description**                                   | 💡 **Example** |
+|     🔢 **Data Type**                        📝 **Description**                                  💡 **Example**                       
 |--------------------------------|---------------------------------------------------|-----------------------------------------------------|
 | **String** (`String`)          | Stores text data.                                 | `{ "name": "John Doe" }`                            |
 | **Integer** (`Int32, Int64`)   | Stores whole numbers.                             | `{ "age": 25 }`                                     |
@@ -24,8 +24,8 @@ MongoDB supports various data types for storing documents in **BSON (Binary JSON
 | **Decimal128** (`Decimal`)     | Stores high-precision floating-point numbers.     | `{ "balance": NumberDecimal("1234.5678") }`         |
 | **Timestamp** (`Timestamp`)    | Special type for automatic timestamping.          | `{ "createdAt": Timestamp() }`                      |
 | **MinKey / MaxKey** (`MinKey, MaxKey`) | Used for comparing values in indexes.     | `{ "minField": MinKey(), "maxField": MaxKey() }`    |
-
----
+|                                |                                                   |                                                     |
+|-------------------------------------------------------------------------------------------------------------------------------------------|
 
 ## 🔹 **Example MongoDB Document**
 ```json
