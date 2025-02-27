@@ -17,7 +17,7 @@ MongoDB supports various data types for storing documents in **BSON (Binary JSON
 | **Object (Embedded Document)** (`Object`) | Stores nested objects (sub-documents). | `{ "address": { "city": "NY", "zip": 10001 } }`     |
 | **ObjectId** (`ObjectId`)      | Unique identifier for documents.                  | `{ "_id": ObjectId("507f1f77bcf86cd799439011") }`   |
 | **Date** (`Date`)              | Stores date & time values.                        | `{ "createdAt": new Date() }`                       |
-| **Null** (`Null`)              | Represents an empty or missing value.             | `{ "status": null }`                                | 
+| **Null** (`Null`)              | Represents an empty or missing value.             | `{ "status": null }`                                |
 | **Binary Data** (`BinData`)    | Stores binary data like images, PDFs, etc.        | `{ "profilePic": BinData(0, "base64EncodedData") }` |
 | **Regular Expression** (`Regex`) | Used for pattern matching.                      | `{ "username": /john/i }`                           |
 | **JavaScript Code** (`JavaScript`) | Stores JavaScript code inside documents.      | `{ "script": function() { return "Hello"; } }`      |
@@ -25,7 +25,7 @@ MongoDB supports various data types for storing documents in **BSON (Binary JSON
 | **Timestamp** (`Timestamp`)    | Special type for automatic timestamping.          | `{ "createdAt": Timestamp() }`                      |
 | **MinKey / MaxKey** (`MinKey, MaxKey`) | Used for comparing values in indexes.     | `{ "minField": MinKey(), "maxField": MaxKey() }`    |
 |                                |                                                   |                                                     |
-|-------------------------------------------------------------------------------------------------------------------------------------------|
+|--------------------------------|---------------------------------------------------|-----------------------------------------------------|
 
 ## 🔹 **Example MongoDB Document**
 ```json
