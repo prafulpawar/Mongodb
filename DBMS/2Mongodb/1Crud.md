@@ -1,5 +1,8 @@
 how to insert Data inside the Mongodb
 db.name_collection.insertOne
+
+    db.expenses.insertOne({ name: "abcd", age: 90 });
+
 db.name_collection.insertMany
 
 Read Opreations In MongoDB
@@ -142,3 +145,40 @@ db.expenses.insertOne({
 ---------------------------------------------
 MongoDB Data Packets In Wireshark
 Update Oprators In MongoDB
+
+db.expenses.find({title:"Electricity bill"})
+db.expenses.update({ title: "Electricity bill" }, { $set: { amount: 500 } }); depricated
+db.expenses.updateMany({ title: "Electricity bill" }, { $set: { amount: 500 } });
+db.expenses.updateOne(
+  { _id: ObjectId('67c044d16e6516fc8aea4bbe') },
+  { $set: { amount: 5000, dueDate: "2026-03-01" } }
+);
+
+
+specifc update
+db.expenses.update({ title: "Electricity bill" }, { $set: { amount: 500 } });
+
+db.expenses.updateOne({name:'Prafull'} ,{$unset:{name:' '}} )
+you can not modify id and you cant delete the id also by using update operations
+
+Delete Operation IN MongoDB
+db.expenses.deleteOne({_id :ObjectId('67c044d16e6516fc8aea4bbe') } )
+db.expenses.deleteMany({title :'Electricity bill' } )
+
+how to delete a collection and database
+hum ise drop bolte hai 
+collection ko drop karna ----> db.collection__name.drop()
+Collection ko Drop Karna
+Agar tumhe ek specific collection delete karni ho, toh yeh command use karo:  db.collection_name.drop();
+ex: db.users.drop();
+
+Agar tumhe poora database delete karna ho, toh pehle use command se us database ko select karna hoga, phir dropDatabase() command ka use karna hoga.  :-> use database_name;
+           db.dropDatabase();
+
+      ex: use mydb;
+          db.dropDatabase();
+
+mportant Notes:
+drop() aur dropDatabase() dono permanent actions hain, isliye dhyan se use karo.
+Agar tumhare pass replica set ya sharded cluster hai, toh drop operation ka thoda alag impact ho sakta hai.
+Agar tum Compass GUI use kar rahe ho, toh Drop Collection aur Drop Database ke options UI me bhi milenge.
